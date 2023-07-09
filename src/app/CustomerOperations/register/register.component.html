@@ -1,0 +1,73 @@
+<div class="container" style="background-color: green !important;">
+    <h2><b style="color:black">Register</b></h2>
+</div>
+<br><br>
+<div class="container" style="width: 50%;">
+    <br>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <input type="text" formControlName="name" class="form-control" placeholder="Your Name" >     
+         </div>
+        
+        <div class="form-group">
+            <input type="text" formControlName="emailId" class="form-control" placeholder="Your Email">
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="loginId" class="form-control" placeholder="Login Id" >  
+        </div>
+        <div class="form-group">
+            <input type="password" formControlName="loginPassword" class="form-control" placeholder="Login Password">     
+        </div>
+        <div class="form-group">
+            <input type="password" formControlName="transactionKey" class="form-control" placeholder="Transaction Password">     
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="dob" class="form-control" placeholder="Date of Birth">     
+        </div>
+        <div class="form-group">
+            <input type="hidden" formControlName="isActive" class="form-control" >     
+        </div>
+      
+        <fieldset formGroupName="address">
+            <legend style="text-align: left;"><b>Address</b></legend>
+            <div class="form-group">
+                <input type="text" formControlName="contactNo" class="form-control" placeholder="Contact No">
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="country" class="form-control" placeholder="Country">
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="areaName" class="form-control" placeholder="Area">
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="dist" class="form-control" placeholder="District">
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="state" class="form-control" placeholder="State">
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="pinCode" class="form-control" placeholder="Pin Code" >
+            </div>
+        </fieldset>
+        <fieldset formGroupName="bankDetails">
+            <legend style="text-align: left;"><b>Bank Details</b></legend>
+            <div class="form-group">
+                <input type="text" formControlName="bankName" class="form-control" placeholder="Bank Name">
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="ifscCode" class="form-control" placeholder="IFSC Code">
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="branchName" class="form-control" placeholder="Branch Name">
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="branchCode" class="form-control" placeholder="Branch Code">
+            </div>
+            <div class="form-group">
+                <input type="hidden" formControlName="balance" class="form-control" >
+            </div>
+        </fieldset>
+        <input class="btn btn-success" type="submit" value="Register">
+    </form>
+    <br>
+</div>

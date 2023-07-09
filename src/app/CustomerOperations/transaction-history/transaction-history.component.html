@@ -1,0 +1,29 @@
+<br><br>
+<div class="container">
+    <h2 style="text-align: center; color: green; font-size: 40px;"><b>Transaction History</b></h2><br><hr><br>
+<table class="table table-striped table-hover" style="text-align: center;" >
+    <thead>
+      <tr>
+        <th style="color: burlywood; font-size: large;text-align: center;">Transaction Id</th>
+        <th style="color: burlywood; font-size: large;text-align: center;">Account No</th>
+        <th style="color: burlywood; font-size: large;text-align: center;">Mode of Transfer</th>
+        <th style="color: burlywood; font-size: large; text-align: center;">Time</th>
+        <th style="color: burlywood; font-size: large;text-align: center;">Amount</th>
+        <th style="color: burlywood; font-size: large;text-align: center;">Deposit/Withdraw</th>
+      </tr>
+    </thead>
+    <tbody style="font-size: 15px;">
+      <tr *ngFor="let todo of transactionList; let i = index">
+        <td>{{todo.transactionId}}</td>
+        <td>{{todo.accountNo}}</td>
+        <td>{{todo.mode}} </td>
+        <td>{{todo.date}} </td>
+        <td>{{todo.amount}} </td>
+        <td>{{todo.action}} </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>

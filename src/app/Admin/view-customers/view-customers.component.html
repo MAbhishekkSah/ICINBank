@@ -1,0 +1,35 @@
+<br>
+<div class="container">
+    <h2 style="text-align: center; color:skyblue;"><b>List of Customers</b></h2><hr><br>
+</div>
+
+<div class="container">
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th style="text-align: center;color: green;">Account No</th>
+          <th style="text-align: center;color: green;">Name</th>
+          <th style="text-align: center;color: green;">DOB</th>
+          <th style="text-align: center;color: green;">Email Id</th>
+          <th style="text-align: center;color: green;"> Balance</th>
+          <th style="text-align: center;color: green;">Transaction Permission</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cList of customersList">
+          <td style="text-align: center;">{{cList.accountNumber}}</td>
+          <td style="text-align: center;">{{cList.name}}</td>
+          <td style="text-align: center;">{{cList.dob}}</td>
+          <td style="text-align: center;">{{cList.emailId}}</td>
+          <td style="text-align: center;">{{cList.bankDetails.balance}}</td>
+          <td style="text-align: center;">
+            <button type="button" class="btn btn-success" (click)="grantPermission(cList.accountNumber)">Grant</button>&nbsp;&nbsp;
+          </td>
+          <td style="text-align: center;"><button type="button" class="btn btn-danger" (click)="deleteItem(cList.accountNumber)">Block</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+<router-outlet></router-outlet>

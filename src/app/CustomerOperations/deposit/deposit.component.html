@@ -1,0 +1,31 @@
+<div class="container" style="text-align: center;">
+    <h2 style="color: indianred;"><b>Please Enter Amount to Withdraw!</b></h2>
+  </div><hr>
+<div style="width: 500px; margin:auto;">
+    <div class="submit-form">
+        <div>
+
+            <div class="form-group">
+                <label for="id">Account Number</label>
+                <input type="text" class="form-control" id="id" [(ngModel)]="user.accNo" name="id" [disabled]="true">
+            </div>
+            
+            <div class="form-group">
+                <label for="loginPass">Transaction Password</label>
+                <input type="password" class="form-control" id="loginPass" required [(ngModel)]="user.transactionKey" name="loginPass">
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Deposit Amount</label>
+                <input type="number" class="form-control" id="amount" required [(ngModel)]="user.amount" name="amount">
+            </div>
+
+            <button (click)="depositAmount()" class="btn btn-success">Deposit</button>&nbsp;&nbsp;
+            <button (click)="checkBalance()" class="btn btn-success">Check Balance</button>
+
+        </div>
+    </div><br>
+    <div class="container" *ngIf="flag == true">
+        <h3><span style="text-align: center; color: green;"><b style="text-align: center;">Your Current Balance is {{accountBalance}}/- .</b></span></h3>
+    </div>
+</div>
